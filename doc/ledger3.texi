@@ -2057,12 +2057,8 @@ If you have a large Ledger register already created use the
 @command{accounts} command to get started:
 
 @smallexample @c command:validate
-$ ledger accounts >> Accounts.dat
+$ ledger accounts | sed -e 's/^/account ' >> Accounts.dat
 @end smallexample
-
-@noindent
-You will have to edit this file to add the @code{account} directive in
-front of every line.
 
 @node Journal Format, Converting from other formats, Keeping it Consistent, Keeping a Journal
 @section Journal Format
